@@ -46,11 +46,12 @@ const getStandings = leagueID => {
         
     }
     
-    fetch(`${base_url}/competitions/${leagueID}/standings`,{
+   fetch(`${base_url}/competitions/${leagueID}/standings`,{
         headers:{
             'X-Auth-Token' : api_token
         }
     })
+    
     .then(status)
     .then(res => res.json())
     .then(data => {
@@ -126,6 +127,7 @@ const getTeams = leagueID => {
             'X-Auth-Token' : api_token
         }
     })
+ 
     .then(status)
     .then(res => res.json())
     .then(data => {
